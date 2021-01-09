@@ -4,6 +4,7 @@ import br.com.springbatchexample.model.User;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,6 +23,7 @@ public class Processor implements ItemProcessor<User, User> {
     public User process(User user) {
         System.out.printf("Transforming %s%n", user);
         user.setDept(DEPT_NAMES.get(user.getDept()));
+        user.setTime(new Date());
         return user;
     }
 }
