@@ -3,7 +3,6 @@ package br.com.springbatchexample.batch;
 import br.com.springbatchexample.model.User;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
-
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
