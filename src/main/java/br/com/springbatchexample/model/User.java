@@ -14,7 +14,7 @@ import javax.persistence.Id;
 public class User {
 
     @Id
-    private Long idUser;
+    private Long id;
 
     private String name;
 
@@ -22,5 +22,13 @@ public class User {
 
     private Double salary;
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", dept='" + dept + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 }
